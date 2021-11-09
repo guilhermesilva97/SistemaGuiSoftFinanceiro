@@ -1,0 +1,105 @@
+﻿@model Sistema.Dominio.Entities.Pessoa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes - @Model.NomePessoa </h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonePessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonePessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentificacaoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentificacaoPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CepPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CepPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogradouroPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogradouroPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComplementoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComplementoPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BairroPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BairroPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CidadePessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CidadePessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoPessoa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdPessoa }, new { @class="btn btn-primary"}) |
+    @Html.ActionLink("Voltar", "Index", new { }, new { @class= "btn btn-success" })
+</p>

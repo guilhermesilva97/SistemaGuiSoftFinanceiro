@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Sistema.Dominio.Entities.PlanoDeConta>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#tb tbody tr').each(function () {
+
+            var item = $(this).find('td').eq(2).text();
+
+            if (item == 'True' ) {
+                $(this).find('td').eq(2).text('ATIVO');
+            }
+
+            else {
+                $(this).find('td').eq(2).text('INATIVO');
+            }
+
+        });
+
+    });
+</script>
+
+<br />
+<h2>Plano De Conta</h2>
+
+<br />
+<a type="button" href="/PlanoDeConta/Create" class="btn btn-success">Cadastrar Novo</a>
+<br />
+<br />
+
+<table class="table table-success table-striped" id="tb" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoPlanoDeConta)
+        </th>
+        <th> Categoria </th>
+        <th> Condição </th>
+        <th></th>
+    </tr>
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoPlanoDeConta)
+        </td>
+        <td>@Html.DisplayFor(modelItem => item.CategoriaPlanoDeConta)</td>
+
+        <td>@item.ATIVO</td>
+
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdPlanoDeConta }, new { @class="btn btn-primary"}) |
+            @Html.ActionLink("Remover", "Delete", new { id=item.IdPlanoDeConta }, new { @class="btn btn-danger"})
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

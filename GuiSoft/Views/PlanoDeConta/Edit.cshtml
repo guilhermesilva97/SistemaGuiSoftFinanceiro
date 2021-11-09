@@ -1,0 +1,103 @@
+﻿@model Sistema.Dominio.Entities.PlanoDeConta
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var opcao = $("#selecionarCategoria").val();
+
+        if (opcao == "DÉBITO") {
+            $("#categoria").val("DÉBITO");
+        }
+        else {
+            $("#categoria").val("CRÉDITO");
+        }
+
+        var opcao = $("#selecionarCondicao").val();
+
+        if (opcao == "True") {
+            $("#condicao").val("True");
+        }
+        else {
+            $("#condicao").val("False");
+        }
+
+
+        $("#btnSalvar").click(function () {
+            debugger
+            var envio = "{DescricaoPlanoDeConta:'" + $("#descricao").val().toUpperCase() + "',CategoriaPlanoDeConta:'" + $("#categoria").val() + "',IdPlanoDeConta:'" + $("#idPlanoDeConta").val() + "',ATIVO:'" + $("#condicao").val() + "'}";
+            var json = eval("(" + envio + ')');
+
+            $.ajax({
+                url: "Edit",
+                data: JSON.stringify(json),
+                type: "POST",
+                //async: false,//this makes the ajax-call blocking
+                contentType: 'application/json;charset=UTF-8',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.success) {
+                        alertify.alert("Plano De Conta modificada com sucesso!", function (e) {
+                            if (e) {
+                               window.location.href = "@Url.Action("Index", "PlanoDeConta")";
+                            }
+                        });
+                    } else {
+                        alertify.error("Ocorreu um erro");
+                    }
+                },
+                error: function (error) {
+                    var data = JSON.parse(error.responseText);
+                    var i = 0;
+                    while (data[i] != null) {
+                        alertify.error(data[i]['errors']);
+                        i++;
+                    }
+                }
+            });
+
+        });
+    });
+</script>
+
+<input type="text" style="display:none" id="idPlanoDeConta" value="@Html.DisplayFor(x=>x.IdPlanoDeConta)" />
+
+<h4>Plano De Conta - @Model.DescricaoPlanoDeConta</h4>
+
+<hr />
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-md-2">Plano De Conta</label>
+        <div class="col-md-10">
+            <input type="text" class="Upper form-control" id="descricao" value="@Html.DisplayFor(x=>x.DescricaoPlanoDeConta)" />
+        </div>
+    </div>
+    <br />
+
+    <input style="display:none" value="@Model.CategoriaPlanoDeConta" id="selecionarCategoria" />
+
+    <div class="form-group">
+        <select class="form-select form-control" id="categoria">
+            <option value="CRÉDITO">CRÉDITO</option>
+            <option value="DÉBITO">DÉBITO</option>
+        </select>
+    </div>
+
+    <br />
+    <input style="display:none" value="@Model.ATIVO.ToString()" id="selecionarCondicao" />
+    <div class="form-group">
+        <select class="form-select form-control" id="condicao">
+            <option value="True">ATIVO</option>
+            <option value="False">INATIVO</option>
+        </select>
+    </div>
+
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input class="btn btn-success" type="submit" id="btnSalvar" value="Salvar" />
+            <a href="~/PlanoDeConta/Index" type="button" class="btn btn-primary">Voltar</a>
+        </div>
+    </div>
+</div>
+

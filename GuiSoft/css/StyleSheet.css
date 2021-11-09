@@ -1,0 +1,25 @@
+﻿body {
+    background-color: #F0F8FF;
+}
+
+
+
+.ElementosIndex {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ElementosIndex:hover img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.imgIndex {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.Upper {
+    text-transform: uppercase;
+}

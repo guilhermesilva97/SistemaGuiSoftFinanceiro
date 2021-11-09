@@ -1,0 +1,73 @@
+﻿<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#btnLogin").click(function () {
+
+            var envio = "{LoginUsuario:'" + $("#loginUsuario").val().toUpperCase() + "',Senha:'" + $("#senhaUsuario").val() + "'}";
+            var json = eval("(" + envio + ')');
+
+            $.ajax({
+                url: "Login",
+                data: JSON.stringify(json),
+                type: "POST",
+                contentType: 'application/json;charset=UTF-8',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.success) {
+
+                     window.location.href = "@Url.Action("Index", "Home")";
+
+                    } else {
+                        alertify.error("Usuário ou senha incorretos");
+                    }
+                },
+                error: function (error) {
+                    var data = JSON.parse(error.responseText);
+                    var i = 0;
+                    while (data[i] != null) {
+                        alertify.error(data[i]['errors']);
+                        i++;
+                    }
+                }
+            });
+        });
+        });
+
+</script>
+
+<br />
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <section id="loginForm">
+
+                <h4>Entrar</h4>
+                <hr />
+                <div class="form-group">
+                    Usuário
+                    <div class="col-md-10">
+                       <input class="form-control Upper" id="loginUsuario" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    Senha
+                    <div class="col-md-12">
+                        <input class="form-control" type="password" id="senhaUsuario"/>
+                    </div>
+                </div>
+
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button class="btn btn-success" id="btnLogin">Entrar</button>
+                        <a type="button" class="btn btn-primary" href="~/Usuario/Registrar">Registrar</a>
+                    </div>
+                </div>
+
+        </section>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>

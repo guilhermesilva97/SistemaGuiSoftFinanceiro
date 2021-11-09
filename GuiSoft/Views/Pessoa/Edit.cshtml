@@ -1,0 +1,170 @@
+﻿@model Sistema.Dominio.Entities.Pessoa
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#lblTelefone").mask('(00) 00000-0000');
+        $("#cep").mask('00000-000');
+
+        $("#btnSalvar").click(function () {
+            debugger
+            var envio = "{IdPessoa:'" + $("#idPessoa").val() + "',NomePessoa:'" + $("#lblNome").val().toUpperCase() + "',TelefonePessoa:'" + $("#lblTelefone").val() +
+                "',EmailPessoa:'" + $("#lblEmail").val().toUpperCase() + "',IdentificacaoPessoa:'" + $("#lblIdentificacao").val() +
+                "',CepPessoa:'" + $("#cep").val() + "',LogradouroPessoa:'" + $("#rua").val().toUpperCase() +
+                "',NumeroPessoa:'" + $("#lblNumero").val() + "',ComplementoPessoa:'" + $("#lblComplemento").val().toUpperCase() +
+                "',BairroPessoa:'" + $("#bairro").val().toUpperCase() + "',CidadePessoa:'" + $("#cidade").val().toUpperCase() + "',EstadoPessoa:'" + $("#uf").val().toUpperCase() +"'}";
+            var json = eval("(" + envio + ')');
+
+            $.ajax({
+                url: "Edit",
+                data: JSON.stringify(json),
+                type: "POST",
+                //async: false,//this makes the ajax-call blocking
+                contentType: 'application/json;charset=UTF-8',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.success) {
+                        alertify.alert("Pessoa editada com sucesso!", function (e) {
+                            if (e) {
+                               window.location.href = "@Url.Action("Index", "Pessoa")";
+                            }
+                        });
+                    } else {
+                        alertify.error("Ocorreu um erro");
+                    }
+                },
+                error: function (error) {
+                    var data = JSON.parse(error.responseText);
+                    var i = 0;
+                    while (data[i] != null) {
+                        alertify.error(data[i]['errors']);
+                        i++;
+                    }
+                }
+            });
+
+        });
+    });
+</script>
+
+<h2>Editar - @Model.NomePessoa </h2>
+
+
+<input type="text" style="display:none" id="idPessoa" value="@Html.DisplayFor(x=>x.IdPessoa)" />
+
+<div class="form-horizontal">
+    <hr />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-2">Nome</label>
+                    <div class="col-md-10">
+                        <input type="text" id="lblNome" value="@Html.DisplayFor(x=>x.NomePessoa)" class="Upper form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Telefone</label>
+                    <div class="col-md-4">
+                        <input type="text" value="@Html.DisplayFor(x=>x.TelefonePessoa)" id="lblTelefone" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">E-mail</label>
+                    <div class="col-md-10">
+                        <input type="text" id="lblEmail" value="@Html.DisplayFor(x=>x.EmailPessoa)" class="Upper form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">CPF/CNPJ</label>
+                    <div class="col-md-10">
+                        <input type="text" id="lblIdentificacao" value="@Html.DisplayFor(x=>x.IdentificacaoPessoa)" readonly class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+
+
+                <div class="form-group">
+                    <label class="control-label col-md-1">CEP</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <input type="text" id="cep" class="form-control" value="@Html.DisplayFor(x=>x.CepPessoa)" />
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-info" id="BuscaCep">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Logradouro</label>
+                    <div class="col-md-10">
+                        <input type="text" id="rua" class="Upper form-control" value="@Html.DisplayFor(x=>x.LogradouroPessoa)" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Número</label>
+                    <div class="col-md-10">
+                        <input type="text" id="lblNumero" class="form-control" value="@Html.DisplayFor(x=>x.NumeroPessoa)" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Complemento</label>
+                    <div class="col-md-10">
+                        <input type="text" id="lblComplemento" class="Upper form-control" value="@Html.DisplayFor(x=>x.ComplementoPessoa)" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Bairro</label>
+                    <div class="col-md-10">
+                        <input type="text" id="bairro" class="Upper form-control" value="@Html.DisplayFor(x=>x.BairroPessoa)" />
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Cidade</label>
+                    <div class="col-md-10">
+                        <input type="text" id="cidade" class=" Upper form-control" value="@Html.DisplayFor(x=>x.CidadePessoa)" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">UF</label>
+                    <div class="col-md-10">
+                        <input type="text" id="uf" class="Upper form-control" value="@Html.DisplayFor(x=>x.EstadoPessoa)" />
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <hr />
+    <input type="submit" value="Salvar" id="btnSalvar" class="btn btn-success" />
+    <a href="~/Pessoa/Index" type="button" class="btn btn-primary">Voltar</a>
+</div>
+
+
+        @section Scripts {
+            @Scripts.Render("~/Scripts/cep.js")
+        }

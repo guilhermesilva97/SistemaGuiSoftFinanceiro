@@ -1,0 +1,68 @@
+﻿@model Sistema.Dominio.Entities.UnidadeNeg
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnSalvar").click(function () {
+            debugger
+            var envio = "{IdUnidade:'" + $("#idUnidade").val() + "',NomeUnidadeNeg:'" + $("#descricao").val().toUpperCase() + "'}";
+            var json = eval("(" + envio + ')');
+
+            $.ajax({
+                url: "Edit",
+                data: JSON.stringify(json),
+                type: "POST",
+                //async: false,//this makes the ajax-call blocking
+                contentType: 'application/json;charset=UTF-8',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.success) {
+                        alertify.alert("Unidade de negócio editada com sucesso!", function (e) {
+                            if (e) {
+                               window.location.href = "@Url.Action("Index", "UnidadeNeg")";
+                            }
+                        });
+                    } else {
+                        alertify.error("Ocorreu um erro");
+                    }
+                },
+                error: function (error) {
+                    var data = JSON.parse(error.responseText);
+                    var i = 0;
+                    while (data[i] != null) {
+                        alertify.error(data[i]['errors']);
+                        i++;
+                    }
+                }
+            });
+
+        });
+    });
+</script>
+
+
+
+
+<h2>Editar - @Model.NomeUnidadeNeg</h2>
+
+
+<input type="text" style="display:none" id="idUnidade" value="@Html.DisplayFor(x=>x.IdUnidade)" />
+
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">Descrição</label>
+        <div class="col-md-10">
+            <input type="text" class="Upper form-control" id="descricao" value="@Html.DisplayFor(x=>x.NomeUnidadeNeg)" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input class="btn btn-success" type="submit" id="btnSalvar" value="Salvar" />
+            <a href="~/UnidadeNeg/Index" type="button" class="btn btn-primary">Voltar</a>
+        </div>
+    </div>
+</div>
+
+

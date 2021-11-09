@@ -1,0 +1,67 @@
+﻿@model Sistema.Dominio.Entities.UnidadeNeg
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnCadastrar").click(function () {
+            debugger
+            var envio = "{NomeUnidadeNeg:'" + $("#descricao").val().toUpperCase() + "'}";
+            var json = eval("(" + envio + ')');
+
+            $.ajax({
+                url: "Create",
+                data: JSON.stringify(json),
+                type: "POST",
+                //async: false,//this makes the ajax-call blocking
+                contentType: 'application/json;charset=UTF-8',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.success) {
+                        alertify.alert("Unidade de negócio criada com sucesso!", function (e) {
+                            if (e) {
+                               window.location.href = "@Url.Action("Index", "UnidadeNeg")";
+                            }
+                        });
+                    } else {
+                        alertify.error("Ocorreu um erro");
+                    }
+                },
+                error: function (error) {
+                    var data = JSON.parse(error.responseText);
+                    var i = 0;
+                    while (data[i] != null) {
+                        alertify.error(data[i]['errors']);
+                        i++;
+                    }
+                }
+            });
+
+        });
+    });
+</script>
+
+
+
+<h2>Cadastrar Nova Unidade De Negócio</h2>
+
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">Descrição</label>
+        <div class="col-md-10">
+            <input type="text" id="descricao" class="Upper form-control" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input class="btn btn-success" type="submit" id="btnCadastrar" value="Cadastrar" />
+            <a href="~/UnidadeNeg/Index" type="button" class="btn btn-primary">Voltar</a>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,69 @@
+﻿@model Sistema.Dominio.Entities.Usuario
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#btnSair").click(function () {
+
+            $.ajax({
+                url: "Logoff",
+                data: {},
+                type: "POST",
+                //async: false,//this makes the ajax-call blocking
+                contentType: 'application/json;charset=UTF-8',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.success) {
+                        alertify.alert("Você desconectou", function (e) {
+                            if (e) {
+                                window.location.href = "@Url.Action("Login", "Usuario")";
+                            }
+                        });
+                    } else {
+                        alertify.error("Usuário ou senha incorretos");
+                    }
+                },
+                error: function (error) {
+                    var data = JSON.parse(error.responseText);
+                    var i = 0;
+                    while (data[i] != null) {
+                        alertify.error(data[i]['errors']);
+                        i++;
+                    }
+                }
+            });
+
+
+
+        });
+
+        $("#btnCancelar").click(function () {
+            window.location.href = "@Url.Action("Index", "Home")";
+        });
+    });
+
+</script>
+
+
+<br />
+
+<div class="row">
+    <div class="col-md-12" style="text-align:center">
+        <h3> Usuário: <b>@Model.LoginUsuario</b></h3>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4" style="text-align:center">
+        <h5>Deseja realmente sair?</h5>
+
+        <hr />
+        <button class="btn btn-danger" id="btnSair">Sair</button>
+        <button class="btn btn-primary" id="btnCancelar">Cancelar</button>
+    </div>
+
+    <div class="col-md-4"></div>
+</div>

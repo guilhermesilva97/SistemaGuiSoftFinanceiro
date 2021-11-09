@@ -1,0 +1,70 @@
+﻿@model Sistema.Dominio.Entities.PlanoDeConta
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#remover").click(function () {
+
+            alertify.confirm("Deseja realmente apagar esta conta?", function (e) {
+                if (e) {         
+                    var envio = "{id:'" + $("#idPlanoDeConta").val() + "'}";
+                    var json = eval('(' + envio + ')');
+
+                    $.ajax({
+                        url: "Delete",
+                        data: JSON.stringify(json),
+                        type: "POST",
+                        contentType: 'application/json;charset=UTF-8',
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result.success) {
+                                alertify.alert("Plano de conta removido com sucesso!", function (e) {
+                                    if (e) {
+                                        window.location.href = "@Url.Action("Index", "PlanoDeConta")";
+                                    }
+                                });
+                            } else {
+                                alertify.error("Não é possivel remover o Plano De Conta pois ela está associada a um financeiro!");
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    });
+
+</script>
+
+
+
+<h3>Remover - @Model.DescricaoPlanoDeConta </h3>
+
+
+<input type="text" style="display:none" id="idPlanoDeConta" value="@Html.DisplayFor(x=>x.IdPlanoDeConta)" />
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Plano De Conta</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoPlanoDeConta)
+        </dd>
+
+        <dt>
+            <label>Descrição</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaPlanoDeConta)
+        </dd>
+
+    </dl>
+
+    <div class="form-actions no-color">
+        <input type="button" value="Remover" id="remover" class="btn btn-danger" /> |
+        <a href="~/PlanoDeConta/Index" type="button" class="btn btn-primary">Voltar</a>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+﻿@model Sistema.Dominio.Entities.ContaCorrente
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#remover").click(function () {
+
+            alertify.confirm("Deseja realmente apagar esta Conta Corrente?", function (e) {
+                if (e) {
+                    var envio = "{id:'" + $("#idContaCorrente").val() + "'}";
+                    var json = eval('(' + envio + ')');
+
+                    $.ajax({
+                        url: "Delete",
+                        data: JSON.stringify(json),
+                        type: "POST",
+                        contentType: 'application/json;charset=UTF-8',
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result.success) {
+                                alertify.alert("Conta Corrente removida com sucesso!", function (e) {
+                                    if (e) {
+                                        window.location.href = "@Url.Action("Index", "ContaCorrente")";
+                                    }
+                                });
+                            } else {
+                                alertify.error("Não é possivel remover a Conta Corrente pois ela está associada a um financeiro!");
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    });
+
+</script>
+
+
+<h2>Remover - @Model.BancoContaCorrente </h2>
+
+<input type="text" style="display:none" id="idContaCorrente" value="@Html.DisplayFor(x=>x.IdContaCorrente)" />
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Descrição
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BancoContaCorrente)
+        </dd>
+
+        <dt>
+            Agência
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgenciaContaCorrente)
+        </dd>
+
+        <dt>
+            Conta
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContaContaCorrente)
+        </dd>
+
+    </dl>
+    <div class="form-actions no-color">
+        <input type="button" value="Remover" id="remover" class="btn btn-danger" /> |
+        <a href="~/ContaCorrente/Index" type="button" class="btn btn-primary">Voltar</a>
+    </div>
+</div>

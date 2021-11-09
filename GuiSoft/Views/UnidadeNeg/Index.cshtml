@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Sistema.Dominio.Entities.UnidadeNeg>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<h2>Unidade De Negócio</h2>
+<br />
+    <a type="button" href="/UnidadeNeg/Create" class="btn btn-success">Cadastrar Novo</a>
+    <br /><br />
+<table class="table table-success table-striped" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeUnidadeNeg)
+        </th>
+        <th></th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeUnidadeNeg)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.IdUnidade }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Deletar", "Delete", new { id = item.IdUnidade }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

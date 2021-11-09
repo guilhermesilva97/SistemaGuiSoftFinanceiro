@@ -1,0 +1,152 @@
+﻿@model Sistema.Dominio.Entities.Pessoa
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#remover").click(function () {
+
+            alertify.confirm("Deseja realmente remover?", function (e) {
+                if (e) {
+
+                    debugger
+                    var envio = "{id:'" + $("#idPessoa").val() + "'}";
+                    var json = eval('(' + envio + ')');
+
+                    $.ajax({
+                        url: "Delete",
+                        data: JSON.stringify(json),
+                        type: "POST",   
+                        contentType: 'application/json;charset=UTF-8',
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result.success) {
+                                alertify.alert("Pessoa removida com sucesso!", function (e) {
+                                    if (e) {
+                                        window.location.href = "@Url.Action("Index", "Pessoa")";
+                                    }
+                                });
+                            } else {
+                                alertify.error("Não é possivel remover a pessoa pois ela está associada a um financeiro!");
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    });
+
+</script>
+
+
+<h3>Deseja remover - @Model.NomePessoa ?</h3>
+
+
+
+<input type="text" style="display:none" id="idPessoa" value="@Html.DisplayFor(x=>x.IdPessoa)" />
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomePessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomePessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonePessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonePessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentificacaoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentificacaoPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CepPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CepPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LogradouroPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LogradouroPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComplementoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComplementoPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BairroPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BairroPessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CidadePessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CidadePessoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoPessoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoPessoa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="button" value="Remover" id="remover" class="btn btn-danger" /> |
+            <a href="~/Pessoa/Index" type="button" class="btn btn-primary">Voltar</a>
+        </div>
+    }
+</div>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Sistema.Dominio.Entities.ContaCorrente>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#tb tbody tr').each(function () {
+
+            var item = $(this).find('td').eq(3).text();
+
+            if (item == 'True') {
+                $(this).find('td').eq(3).text('ATIVO');
+            }
+
+            else {
+                $(this).find('td').eq(3).text('INATIVO');
+            }
+
+        });
+
+    });
+</script>
+
+<br />
+<h2>Conta Corrente</h2>
+
+<br />
+<a type="button" href="/ContaCorrente/Create" class="btn btn-success">Cadastrar Novo</a>
+<br />
+<br />
+
+<table class="table table-success table-striped" id="tb">
+    <tr>
+        <th>
+            Descrição
+        </th>
+        <th> Agência </th>
+        <th> Conta </th>
+        <th> Condição </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BancoContaCorrente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgenciaContaCorrente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContaContaCorrente)
+            </td>
+            <td>@item.ATIVO</td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdContaCorrente }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Remover", "Delete", new { id = item.IdContaCorrente }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

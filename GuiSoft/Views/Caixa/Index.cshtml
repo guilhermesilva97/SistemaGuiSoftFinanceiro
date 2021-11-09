@@ -1,0 +1,320 @@
+﻿@model IEnumerable<Sistema.Dominio.Entities.Financeiro>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var soma = 0;
+        var somaCaixa = 0;
+
+        $("select[name='Opcao']").change(function () {
+
+            var opcao = this.value;
+
+            if (opcao == "BalanceteAnual") {
+                $("#DataDe").val("");
+                $("#DataAte").val("");
+                $("#TipoDeFiltro").val("");
+                $("#DataDe").prop("hidden", true);
+                $("#DataDe").prop("readonly", true);
+                $("#DataAte").prop("readonly", true);
+                $("#PeriodoRelatorio").prop("hidden", false);
+                $("#PeriodoRelatorio").prop("readonly", false);
+                $("#TipoDeFiltro>option[value='LANÇAMENTO']").prop('disabled', true);
+            }
+            else if (opcao == "BalanceteMensal") {
+                $("#DataDe").prop('type', 'month');
+                $("#DataDe").prop("hidden", false);
+                $("#DataAte").prop("readonly", true);
+                $("#PeriodoRelatorio").prop("readonly", true);
+                $("#PeriodoRelatorio").prop("hidden", true);
+                $("#TipoDeFiltro").val('');
+                $("#TipoDeFiltro>option[value='LANÇAMENTO']").prop('disabled', true);
+            }
+            else {
+                $("#TipoDeFiltro>option[value='VENCIMENTO']").prop('disabled', false);
+                $("#TipoDeFiltro>option[value='LANÇAMENTO']").prop('disabled', false);
+                $("#PeriodoRelatorio").prop("hidden", true);
+                $("#PeriodoRelatorio").prop("readonly", true);
+                $("#PeriodoRelatorio").val("");
+                $("#DataDe").prop('type', 'date');
+                $("#DataDe").prop("hidden", false);
+                $("#DataAte").prop("readonly", false);
+            }
+
+        });
+
+
+        // SOMANDO VALORES QUE JA TIVERAM PAGAMENTO EFETUADO, E DEIXANDO EM PROVISÃO VALORES QUE AINDA NÃO FORAM PAGOS
+        $('#tbcaixa tbody tr').each(function () {
+            var pag = $(this).find('td').eq(8).text();
+
+            if (pag != '') {
+                var item = $(this).find('td').eq(6).text().replace("R$", "").replace(",", ".");
+                item = item * 1;
+                somaCaixa += item;
+
+                if (somaCaixa < 0) {
+                    $("#totalCaixa").css("color", "red");
+                }
+                else {
+                    $("#totalCaixa").css("color", "green");
+                }
+
+                var f = somaCaixa.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+                $("#totalCaixa").val(f);
+
+            } else {
+                var item = $(this).find('td').eq(6).text().replace("R$", "").replace(",", ".");
+                item = item * 1;
+                soma += item;
+
+                if (soma < 0) {
+                    $("#provisao").css("color", "red");
+                }
+                else {
+                    $("#provisao").css("color", "green");
+                }
+
+                var f = soma.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+                $("#provisao").val(f);
+            }
+        });
+
+        // ABRINDO DETALHES DO FINANCEIRO QUE FOR CLICADO
+        $("a.details").click(function () {
+            var url = $(this).parents("tr").find("td").eq(0).text().replace(/\s{2,}/g, ' ');
+            window.location.href = "../Lancamento/EditarLancamento/" + url;
+        });
+
+
+        // REMOVENDO O FINANCEIRO COM BASE NA LINHA DA TABELA
+        $("a.remover").click(function () {
+            var url = $(this).parents("tr").find("td").eq(0).text().replace(/\s{2,}/g, ' ');
+
+            alertify.confirm("Deseja realmente remover?", function (e) {
+                if (e) {
+
+                    var envio = "{id:'" + url + "'}";
+                    var json = eval('(' + envio + ')');
+
+                    $.ajax({
+                        url: "../Lancamento/Delete",
+                        data: JSON.stringify(json),
+                        type: "POST",
+                        contentType: 'application/json;charset=UTF-8',
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result.success) {
+                                alertify.alert("Financeiro removido com sucesso!", function (e) {
+                                    if (e) {
+                                        window.location.reload();
+                                    }
+                                });
+                            } else {
+                                alertify.error("Ocorreu um erro");
+                            }
+                        }
+                    });
+
+                }
+            });
+
+        });
+
+
+    });
+
+</script>
+
+
+
+<br />
+
+<h1 style="text-align:center">Caixa</h1>
+<br />
+<a class="btn btn-success" href="~/Lancamento/NovoLancamento">Novo Lançamento</a>
+<hr />
+
+<h4 style="text-align:center">Relatório</h4>
+<table class="col-md-12">
+    <thead>
+        <tr>
+            <th class="col-md-2">Tipo de Relatório</th>
+            <th class="col-md-2">Tipo De Filtro</th>
+
+            <th class="col-md-2" id="sumirDe">De:</th>
+            <th class="col-md-2" id="sumirAte">Até:</th>
+            <th class="col-md-2"></th>
+        </tr>
+    </thead>
+
+    @using (Html.BeginForm("exportReport", "Caixa"))
+    {
+        <tbody>
+            <tr>
+                <td>
+                    <select class="form-select form-control" id="Opcao" name="Opcao" required>
+                        <option selected value=""></option>
+                        <option value="Extrato">Extrato De Caixa </option>
+                        <option value="BalanceteMensal">Balancete Mensal</option>
+                        <option value="BalanceteAnual">Balancete Anual</option>
+                    </select>
+                </td>
+
+                <td class="col-md-2">
+                    <select class="form-select form-control" id="TipoDeFiltro" name="TipoDeFiltro" required>
+                        <option selected value=""></option>
+                        <option value="PAGAMENTO"> Ordens Pagas</option>
+                        <option value="VENCIMENTO">Ordens Vencidas</option>
+                        <option value="LANÇAMENTO"> Ordens Lançadas</option>
+                    </select>
+                </td>
+
+                <td><input type="date" class="form-control" id="DataDe" name="DataDe" required /><input type="number" placeholder="2021" min="2017" max="2100" id="PeriodoRelatorio" name="PeriodoRelatorio" required hidden class="form-control" maxlength="4" /></td>
+                <td><input type="date" class="form-control" id="DataAte" name="DataAte" required readonly/></td>
+                <td><input type="submit" value="Download Relatório" class="btn btn-primary" /></td>
+
+            </tr>
+        </tbody>
+    }
+</table>
+
+<hr />
+<h4 style="text-align:center">Filtrar Caixa</h4>
+<hr />
+
+<table class="col-md-12">
+    <thead>
+        <tr>
+            <th class="col-md-2"></th>
+            <th class="col-md-2"></th>
+            <th class="col-md-2">De:</th>
+            <th class="col-md-2">Até:</th>
+            <th class="col-md-2"></th>
+            <th class="col-md-2"></th>
+        </tr>
+    </thead>
+
+    @using (Html.BeginForm())
+    {
+        <tbody>
+            <tr>
+                <td></td>
+                <td class="col-md-2">
+                    <select class="form-select form-control" id="CategoriaFiltro" name="CategoriaFiltro" required>
+                        <option selected value="">Filtrar por:</option>
+                        <option value="PAGAMENTO"> Ordens Pagas</option>
+                        <option value="LANCAMENTO"> Ordens Lançadas</option>
+                        <option value="VENCIMENTO">Ordens Vencidas</option>
+                    </select>
+                </td>
+                <td><input type="date" class="form-control" id="DataDeFiltro" name="DataDeFiltro" /></td>
+                <td><input type="date" class="form-control" id="DataAteFiltro" name="DataAteFiltro" /></td>
+                <td><input type="submit" value="Buscar" class="btn btn-primary" /></td>
+                <td></td>
+            </tr>
+        </tbody>
+    }
+</table>
+<hr />
+<table>
+    <tr>
+        <th class="col-md-2" style="font-size: 25px; text-align: center;">Total Em Caixa: </th>
+        <th class="col-md-2" style="font-size:25px"><input class="form-control" id="totalCaixa" readonly /></th>
+
+        <th class="col-md-2" style="font-size: 25px; text-align: center;">Provisão:</th>
+        <th class="col-md-2" style="font-size:25px"><input class="form-control" id="provisao" readonly /></th>
+    </tr>
+</table>
+<hr />
+<table class="table col-md-12 table-striped table-success table-bordered" id="tbcaixa" style="font-size:14px">
+    <thead>
+    <th>
+        Descrição
+    </th>
+    <th>
+        Conta
+    </th>
+    <th>
+        Pessoa
+    </th>
+    <th>
+        Plano de Conta
+    </th>
+    <th>
+       Forma PGTO
+    </th>
+    <th>
+        Total da Ordem
+    </th>
+    <th>
+       Lançamento
+    </th>
+    <th>
+      Pagamento
+    </th>
+    <th>
+       Vencimento
+    </th>
+    <th>Detalhes</th>
+    <th>Remover</th>
+    </tr>
+    </thead>
+    <tbody style="font-size:14px">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="display:none"> @item.IdFinanceiro </td>
+                <td>
+                    @item.Descricao
+                </td>
+                <td>
+                    @item.ContaCorrente.BancoContaCorrente
+                </td>
+                <td>
+                    @item.Pessoa.NomePessoa
+                </td>
+                <td>
+                    @item.PlanoDeConta.DescricaoPlanoDeConta
+                </td>
+                <td>
+                    @item.ModoPagamento.DescricaoPagamento
+                </td>
+                <td> R$ @item.TotalFinanceiro</td>
+                <td>
+                    @item.DataLancamento.ToShortDateString()
+                </td>
+
+                <td>@if (item.DataPagamento != null)
+                {@item.DataPagamento.Value.ToShortDateString();
+            }</td>
+
+
+                <td>
+                    @item.DataVencimento.ToShortDateString()
+                </td>
+
+                <td style="text-align:center">
+                    <a class="details">
+                        <button type="button" class="btn btn-success btn-sm">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+                                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                                <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+                            </svg>
+
+                        </button>
+                    </a>
+                </td>
+
+                <td style="text-align:center">
+                    <a class="remover">
+                        <button type="button" class="btn btn-danger btn-sm"> X </button>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

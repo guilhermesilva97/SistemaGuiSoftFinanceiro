@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Sistema.Dominio.Entities.ModoPagamento>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('#tb tbody tr').each(function () {
+            var item = $(this).find('td').eq(1).text();
+
+            if (item == 'True') {
+                $(this).find('td').eq(1).text('ATIVO');
+            }
+            else {
+                $(this).find('td').eq(1).text('INATIVO');
+            }
+        });
+
+    });
+</script>
+
+
+<br />
+<h2>Métodos De Pagamento</h2>
+<br />
+
+<p>
+    @Html.ActionLink("Cadastrar Novo", "Create", new { }, new { @class = "btn btn-success" })
+</p>
+
+<br />
+<table class="table table-success table-striped" id="tb">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoPagamento)
+        </th>
+        <th>Condição</th>
+        <th></th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescricaoPagamento)
+                </td>
+                <td>@item.ATIVO</td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.IdPagamento }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Remover", "Delete", new { id = item.IdPagamento }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

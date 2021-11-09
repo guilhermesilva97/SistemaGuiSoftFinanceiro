@@ -1,0 +1,68 @@
+﻿@model Sistema.Dominio.Entities.ModoPagamento
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // CRIANDO NOVO MODO DE PAGAMENTO
+        $("#btnCadastrar").click(function () {
+            debugger
+            var envio = "{DescricaoPagamento:'" + $("#ModoPag").val().toUpperCase() + "'}";
+            var json = eval("(" + envio + ')');
+
+
+            // ENVIANDO PARA O CONTROLADOR OS DADOS
+            $.ajax({
+                url: "Create",
+                data: JSON.stringify(json),
+                type: "POST",
+                contentType: 'application/json;charset=UTF-8',
+                dataType: 'json',
+                success: function (result) {
+                    if (result.success) {
+                        alertify.alert("Modo de pagamento criado com sucesso!", function (e) {
+                            if (e) {
+                               window.location.href = "@Url.Action("Index", "ModoPagamento")";
+                            }
+                        });
+                    } else {
+                        alertify.error("Ocorreu um erro");
+                    }
+                },
+                error: function (error) {
+                    var data = JSON.parse(error.responseText);
+                    var i = 0;
+                    while (data[i] != null) {
+                        alertify.error(data[i]['errors']);
+                        i++;
+                    }
+                }
+            });
+
+        });
+    });
+</script>
+
+
+<h2>Cadastrar Novo Modo De Pagamento</h2>
+
+<div class="form-horizontal">
+    <hr />
+    <div class="form-group">
+        <label class="control-label col-md-2">Modo De Pagamento</label>
+        <div class="col-md-10">
+            <input class="Upper form-control" id="ModoPag" />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" value="Cadastrar" id="btnCadastrar" class="btn btn-success" />
+            <a href="~/ModoPagamento/Index" type="button" class="btn btn-primary">Voltar</a>
+        </div>
+    </div>
+</div>
+
+
+

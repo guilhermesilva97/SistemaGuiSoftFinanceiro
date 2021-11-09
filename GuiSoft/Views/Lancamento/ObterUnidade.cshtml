@@ -1,0 +1,81 @@
+﻿
+<link href="~/Assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+@using Sistema.Dominio.Entities
+@model List<UnidadeNeg>
+@{
+    ViewBag.Title = "Buscar Unidade";
+    Layout = null;
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#tbunidade tbody tr").click(function () {
+            var Unidade = {};
+            var n,m;
+
+            n = Unidade.Nome = $(this).children().eq('0').text();
+            m = Unidade.Id = $(this).children().eq('1').text();
+            console.info(n,m);
+            window.opener.ObterUnidade(Unidade);
+            window.close();
+        });
+    });
+</script>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Buscar Unidade no Sistema</div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="panel-body">
+
+                    @using (Html.BeginForm())
+                    {
+                        <div class="form-horizontal">
+                            <h2 style="text-align:center; font-family:Arial; font-weight:700;">Buscar Unidade por:</h2>
+                            <fieldset>
+                                <div class="row" style="padding-bottom:8px;">
+                                    <div class="form-group col-md-4">
+                                        @Html.Label("Nome", new { @class = "control-label col-md-4" })
+                                        <div class="col-md-8">
+                                            @Html.TextBox("txtnome", null, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Buscar" class="btn  btn-primary" />
+                                </div>
+                            </fieldset>
+                        </div>
+
+                    }
+                </div>
+
+                <table class="table table-striped" id="tbunidade">
+
+                    <thead>
+                        <tr>
+                            <th style="text-align:center;">Nome</th>
+                        </tr>
+                    </thead>
+                    <tbody style="cursor:pointer">
+                        @foreach (var unidade in Model)
+                        {
+                            <tr>
+                                <td>@unidade.NomeUnidadeNeg</td>
+                                <td style="display:none;">@unidade.IdUnidade</td>
+                            </tr>
+                            
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-2"></div>
+            <script src="~/Assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="~/Assets/jquery/jquery.min.js"></script>
+
+        </div>
+</div>

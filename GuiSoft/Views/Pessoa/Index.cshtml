@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Sistema.Dominio.Entities.Pessoa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<h2>Cadastro De Pessoas</h2>
+<br />
+
+<a type="button" href="/Pessoa/Create" class="btn btn-success">Novo Cadastro</a>
+<br />
+<br />
+
+<table class="table table-success table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomePessoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonePessoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailPessoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdentificacaoPessoa)
+        </th>
+
+        <th></th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomePessoa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelefonePessoa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailPessoa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdentificacaoPessoa)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.IdPessoa }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.IdPessoa }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Remover", "Delete", new { id = item.IdPessoa }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

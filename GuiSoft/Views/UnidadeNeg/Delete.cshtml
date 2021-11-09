@@ -1,0 +1,68 @@
+﻿@model Sistema.Dominio.Entities.UnidadeNeg
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#remover").click(function () {
+
+            alertify.confirm("Deseja realmente remover esta unidade de negócio?", function (e) {
+                if (e) {
+
+
+
+                    debugger
+                    var envio = "{id:'" + $("#idUnidade").val() + "'}";
+                    var json = eval('(' + envio + ')');
+
+                    $.ajax({
+                        url: "Delete",
+                        data: JSON.stringify(json),
+                        type: "POST",
+                        contentType: 'application/json;charset=UTF-8',
+                        dataType: 'json',
+                        success: function (result) {
+                            if (result.success) {
+                                alertify.alert("Unidade de negócio removida com sucesso!", function (e) {
+                                    if (e) {
+                                        window.location.href = "@Url.Action("Index", "UnidadeNeg")";
+                                    }
+                                });
+                            } else {
+                                alertify.error("Não é possivel remover a unidade de negócio pois ela está associada a um financeiro!");
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    });
+
+</script>
+
+
+<h3>Deseja remover - @Model.NomeUnidadeNeg?</h3>
+
+<input type="text" style="display:none" id="idUnidade" value="@Html.DisplayFor(x=>x.IdUnidade)" />
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Descrição</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeUnidadeNeg)
+        </dd>
+
+    </dl>
+
+    <div class="form-actions no-color">
+        <input type="button" value="Remover" id="remover" class="btn btn-danger" /> |
+        <a href="~/UnidadeNeg/Index" type="button" class="btn btn-primary">Voltar</a>
+    </div>
+</div>

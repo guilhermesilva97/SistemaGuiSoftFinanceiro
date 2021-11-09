@@ -1,0 +1,386 @@
+﻿@using Sistema.Dominio.Entities
+@model List<UnidadeNeg>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Js/alertify.min.js"></script>
+<link href="~/Css/alertify.core.css" rel="stylesheet" />
+<link href="~/Css/alertify.default.css" rel="stylesheet" />
+@*<meta http-equiv="refresh" content="6">*@
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#valor").mask('000.000.000,00', { reverse: true });
+
+
+        // DECLARANDO O POP-UP PARA ABRIR O BUSCAR CLIENTES E BUSCAR UNIDADE DE NEGÓCIO
+        $("a[rel='pop-up']").click(function () {
+            var caracteristicas = "height=550,width=1000,scrollTo,resizable=1,scrollbars=1,location=0";
+            nueva = window.open(this.href, 'popup', caracteristicas);
+
+
+            return false;
+        });
+
+        // BOTÃO PARA GERAR UMA NOVA ORDEM
+        $("#txtnova").click(function () {
+            $.ajax({
+                success: function (res) {
+                    window.location.reload().ajax();
+                }
+            });
+        });
+
+
+        // SALVAR ORDEM QUE ESTÁ SENDO CRIADA
+            $("#finalizar").click(function () {
+                debugger;
+
+                var obj = $("#TotalDoFinanceiro").val();
+
+                if (obj == "" || obj <= 0) {
+                    alertify.error("A ordem está vazia ou com valor incorreto!");
+                }
+
+                else {
+
+                    obj = obj.replace("R$", "").replace(".", "").replace(".", "");
+
+
+                // COLETANDO OS DADOS QUE SERÃO UTILIZADOS PARA GERAR O FINANCEIRO E ENVIANDO PARA O CONTROLADOR
+                    var i = 0;
+                    var envio = "{DataLancamento:'" + $("#DataLancamento").val() + "',DataVencimento:'" + $("#DataVencimento").val() +
+                        "',DataPagamento:'" + $("#DataPagamento").val() + "',Descricao:'" + $("#txtDescricao").val().toUpperCase() +
+                        "',IdPagamento:'" + $("#ModoPagamento").val() + "',IdPlanoDeConta:'" + $("#PlanoDeConta").val() +
+                        "',IdContaCorrente:'" + $("#ContaCorrente").val() +
+                        "',IdPessoa:'" + $("#codigoPessoa").val() + "',TotalFinanceiro:'" + obj + "',";
+                $("#detalhe tbody tr").each(function (index) {
+                    if (i == 0) {
+                        var vlr = $(this).find('td').eq(2).text().replace("R$", "").replace(".", "").replace(".", "");
+                        envio += "ListDetalhe:[{IdUnidade:'" + $(this).find('td').eq(0).text() +
+                            "',SubTotalFinanceiroDetalhe:'" + vlr + "'}";
+                    } else {
+                        vlr = $(this).find('td').eq(2).text().replace("R$", "").replace(".", "").replace(".", "");
+                        envio += ",{IdUnidade:'" + $(this).find('td').eq(0).text() +
+                            "',SubTotalFinanceiroDetalhe:'" + vlr + "'}"
+                    }
+                    i = 1;
+                });
+                envio += "]}";
+
+
+                // FAZENDO O ENVIO DOS DADOS
+                $.ajax({
+                    url: "Create",
+                    data: (envio),
+                    type: "POST",
+                    contentType: 'application/json;charset=UTF-8',
+                    dataType: 'json',
+                    success: function (result) {
+                    if (result.success) {
+                        alertify.alert("Ordem gerada com sucesso!", function (e) {
+                            if (e) {
+                               window.location.href = "@Url.Action("Index", "Caixa")";
+                            }
+                        });
+                    } else {
+                        alertify.error("Ocorreu um erro");
+                    }
+                },
+                error: function (error) {
+                    var data = JSON.parse(error.responseText);
+                    var i = 0;
+                    while (data[i] != null) {
+                        alertify.error(data[i]['errors']);
+                        i++;
+                    }
+                }
+                });
+                }
+          });
+
+    });
+
+
+    var total = 0;
+    var valor = 0;
+
+    // POP-UP OBTER PESSOA E OBTER UNIDADE
+    function ObterPessoa(Pessoa) {
+        $("#txtnome").val(Pessoa.Nome);
+        $("#txtidentificacao").val(Pessoa.Identificacao);
+        $("#codigoPessoa").val(Pessoa.Id)
+    }
+
+    function ObterUnidade(Unidade) {
+        $("#nomeunidade").val(Unidade.Nome);
+        $("#idunidade").val(Unidade.Id);
+    }
+
+    function limparUnidade() {
+        $("#idunidade").val("");
+        $("#nomeunidade").val("");
+        $("#valor").val("");
+    };
+
+
+    // ADICIONANDO UMA NOVA UNIDADE DE NEGÓCIO A LISTA DO FINANCEIRO
+    function fn_adicionar() {
+        var y = 0;
+        var comparar = $("#idunidade").val();
+
+        if ($("#nomeunidade").val() == "" || $("#nomeunidade").val() == null) {
+            alertify.error("Selecione uma unidade")
+        } else {
+
+        $("#detalhe tbody tr").each(function (e) {
+            var item = $(this).find('td').eq(0).text();
+            if (item == comparar) {
+                alertify.error("Esta unidade de negócio já está inserida na sua ordem!");
+                y = 1;
+            }
+        });
+
+        if (y == 0) {
+            var subTotal = $("#valor").val().replace(".", "").replace(".", "").replace(",", ".");
+            subTotal = subTotal * 1;
+            subTotal = subTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+
+            cadeia = "<tr>"
+            cadeia = cadeia + "<td style='display: none'>" + $("#idunidade").val() + "</td>";
+            cadeia = cadeia + "<td>" + $("#nomeunidade").val() + "</td>";
+            cadeia = cadeia + "<td>" + subTotal + "</td>";
+            cadeia = cadeia + "<td><a class ='elimina'><button class='btn btn-danger' type='button'>X</button></a></td>";
+            $("#detalhe tbody").append(cadeia);
+            valor = $("#valor").val().replace(".", "").replace(".", "").replace(",", ".");
+            valor = valor * 1;
+            limparUnidade();
+            somar();
+            fn_dar_eliminar();
+        }
+      }
+    }
+
+    // SOMANDO VALORES QUANDO ADICIONA UMA NOVA UNIDADE DE NEGÓCIO
+    function somar() {
+        total = total + valor;
+        dinheiro = total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+        $("#TotalDoFinanceiro").val(dinheiro);
+        dinheiro = "";
+    }
+
+    // SUBTRAINDO VALORES QUANDO É REMOVIDO ALGUMA UNIDADE DE NEGÓCIO
+    function subtrair() {
+        total = total - valor;
+        if (total == 0) {
+            $("#TotalDoFinanceiro").val("");
+        } else {
+            dinheiro = total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            $("#TotalDoFinanceiro").val(dinheiro);
+            dinheiro = "";
+        }
+    }
+
+    // REMOVENDO UNIDADE DE NEGÓCIO DO FINANCEIRO
+    function fn_dar_eliminar() {
+        $("a.elimina").click(function () {
+            valor = $(this).parents("tr").find("td").eq(2).text().replace("R$", "").replace(".", "").replace(".", "").replace(",", ".");
+            valor = valor * 1;
+            $(this).parents("tr").fadeOut("normal", function () {
+                $(this).remove();
+                subtrair();
+            });
+        });
+    };
+
+</script>
+
+<br />
+<h4>Lançar Financeiro</h4>
+
+<table class="table col-md-12">
+    <thead>
+        <tr>
+            <th class="col-md-3"></th>
+            <th class="col-md-3"></th>
+            <th class="col-md-3"></th>
+            <th class="col-md-3"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="font-size:20px;">
+            <td>
+                Descrição
+                <div>
+                    <input type="text" class="Upper form-control" id="txtDescricao" />
+                </div>
+            </td>
+            <td>
+                Conta Corrente
+                <div class="col-md-12 dropdown">
+                    @Html.DropDownList("ContaCorrente", ViewBag.ListaContaCorrente as SelectList, "Selecione uma Conta", htmlAttributes: new { @class = "form-control", @required = "required" })
+                </div>
+            </td>
+
+            <td>
+                Modo de PGTO
+                <div class="col-md-12 dropdown">
+                    @Html.DropDownList("ModoPagamento", ViewBag.ListaModoPagamento as SelectList, "Selecione Pagamento", htmlAttributes: new { @class = "form-control", @required = "required" })
+                </div>
+            </td>
+
+            <td>
+                Plano De Conta
+                <div class="col-md-12 dropdown">
+                    @Html.DropDownList("PlanoDeConta", ViewBag.ListaPlanoDeConta as SelectList, "Selecione um Plano De Conta", htmlAttributes: new { @class = "form-control", @required = "required" })
+                </div>
+            </td>
+
+        </tr>
+  </tbody>
+</table>
+
+
+<table id="cabecalho" class="table col-md-12">
+    <thead>
+        <tr>
+            <th class="col-md-1"></th>
+            <th class="col-md-2"></th>
+            <th class="col-md-2"></th>
+            <th class="col-md-2"></th>
+            <th class="col-md-2"></th>
+            <th class="col-md-2"></th>
+            <th class="col-md-1"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr style="font-size:20px;">
+            <td></td>
+            <td></td>
+            <td>
+                Data do Lançamento
+                <input style="color:red;font-size:20px;" class="form-control" type="date" id="DataLancamento" />
+            </td>
+            <td>
+                Data de Pagamento
+                <input style="color:red;font-size:20px;" class="form-control" type="date" id="DataPagamento" value="" />
+            </td>
+
+            <td>
+                Data de Vencimento
+                <input style="color:red;font-size:20px;" class="form-control" type="date" value="" id="DataVencimento" />
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="col-md-12 table">
+    <thead>
+        <tr style="font-size:20px;">
+            <th class="col-md-4"> Detalhes do Cliente </th>
+            <th class="col-md-4">Nome Cliente </th>
+            <th class="col-md-4"> CPF/CNPJ </th>
+        </tr>
+    </thead>
+    <tbody>
+    <td>
+        <a href="~/Lancamento/ObterPessoa" rel="pop-up">
+            <input class="btn btn-warning btn-lg col-md-12" type="button" name="link_cliente" value="Obter Cliente" />
+        </a>
+    </td>
+
+    <td style="display:none;">
+        <input id="codigoPessoa" />
+    </td>
+
+    <td>
+        <input style="font-size:20px; font-weight:700;" class="form-control" type="text" id="txtnome" readonly required />
+    </td>
+    <td>
+        <input style="font-size:20px; font-weight:700;" class="form-control" type="text" id="txtidentificacao" readonly required />
+    </td>
+    </tbody>
+</table>
+
+<table class="col-md-12 table">
+    <thead>
+        <tr style="font-size:20px;">
+            <th class="col-md-4"> </th>
+            <th class="col-md-4" style="text-align: center; vertical-align: middle;">Unidade de Negócio </th>
+            <th class="col-md-4"> </th>
+        </tr>
+    </thead>
+    <tbody>
+    <td>
+    </td>
+    <td style="text-align: center; vertical-align: middle;">
+
+        <a href="~/Lancamento/ObterUnidade" id="btnUnidade" rel="pop-up" style="font-size:20px; font-weight:700;">
+            <input class="btn btn-info btn-lg" type="button" name="link_unidade" value="Selecionar Unidade" />
+        </a>
+    </td>
+    <td>
+    </td>
+    </tbody>
+</table>
+
+<form action="javascript:fn_adicionar()" ; method="post" id="frm_usu" class="form-horizontal">
+    <table class="table col-md-12">
+        <thead>
+            <tr style="font-size:20px;">
+                <th>Nome da Unidade</th>
+                <th>Valor</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="display:none"><input style="font-size:20px; font-weight:700; display:none" type="text" id="idunidade" class="form-control" readonly required /></td>
+                <td><input style="font-size:20px; font-weight:700;" class="form-control" type="text" id="nomeunidade" readonly required /></td>
+                <td><input style="font-size:20px; font-weight:700;" type="text" id="valor" placeholder="R$ 1.000,00" class="form-control" required /></td>
+                <td><input class="btn btn-primary btn-lg" type="submit" name="adicionar" id="adicionar" value="Adicionar" /></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+<table id="detalhe" class="lista table" border="1">
+    <thead style="font-size:18px;">
+        <tr class="bg-success">
+            <td>Detalhes da Compra</td>
+        </tr>
+        <tr class="bg-danger">
+            <th style="display: none">Id</th>
+            <th>Descrição do Produto</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+
+</table>
+<table class="table">
+    <tr>
+        <td style="float:right;font-size:20px;">Total a Pagar</td>
+        <th></th>
+        <td><input style="font-size:20px; font-weight:700;" class="form-control" type="text" name="TotalDoFinanceiro" id="TotalDoFinanceiro" required readonly /></td>
+    </tr>
+</table>
+<input class="btn btn-success btn-lg" type="button" id="finalizar" value="Gerar" />
+<input class="btn btn-success btn-lg" type="button" id="txtnova" value="Nova SAÍDA" />
+
+
+<script>
+    $(document).ready(function () {
+        $("#txtnova").click(function () {
+            $.ajax({
+                success: function (res) {
+                    window.location.reload().ajax();
+                }
+            });
+        });
+    });
+</script>

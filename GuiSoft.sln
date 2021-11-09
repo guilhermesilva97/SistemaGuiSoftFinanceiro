@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiSoft", "GuiSoft\GuiSoft.csproj", "{D5D9F404-F6C7-47DA-B2D3-2A49A7F9630B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema.Data", "Sistema.Data\Sistema.Data.csproj", "{61B24ECE-B102-471B-969A-3A65C9F308B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema.Dominio", "Sistema.Dominio\Sistema.Dominio.csproj", "{D52E24FC-ED9B-4FFE-B929-BFC7C6635634}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5D9F404-F6C7-47DA-B2D3-2A49A7F9630B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D9F404-F6C7-47DA-B2D3-2A49A7F9630B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D9F404-F6C7-47DA-B2D3-2A49A7F9630B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D9F404-F6C7-47DA-B2D3-2A49A7F9630B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B24ECE-B102-471B-969A-3A65C9F308B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B24ECE-B102-471B-969A-3A65C9F308B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B24ECE-B102-471B-969A-3A65C9F308B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B24ECE-B102-471B-969A-3A65C9F308B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D52E24FC-ED9B-4FFE-B929-BFC7C6635634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52E24FC-ED9B-4FFE-B929-BFC7C6635634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52E24FC-ED9B-4FFE-B929-BFC7C6635634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52E24FC-ED9B-4FFE-B929-BFC7C6635634}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB7525D8-6626-4E08-AD9D-7DE5F6B1A8A2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://www.divsoft.com.br:3089/tfs/divsoft
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GuiSoft\\GuiSoft.csproj
+		SccProjectName1 = GuiSoft
+		SccLocalPath1 = GuiSoft
+		SccProjectUniqueName2 = Sistema.Data\\Sistema.Data.csproj
+		SccProjectName2 = Sistema.Data
+		SccLocalPath2 = Sistema.Data
+		SccProjectUniqueName3 = Sistema.Dominio\\Sistema.Dominio.csproj
+		SccProjectName3 = Sistema.Dominio
+		SccLocalPath3 = Sistema.Dominio
+	EndGlobalSection
+EndGlobal

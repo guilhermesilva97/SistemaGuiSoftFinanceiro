@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - GuiSoft - Software</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css" />
+
+    <script src="~/Js/alertify.min.js"></script>
+    <link href="~/Css/alertify.core.css" rel="stylesheet" />
+    <link href="~/Css/alertify.default.css" rel="stylesheet" />
+
+    <script src='@Url.Content("~/Scripts/jquery.validate.js")' type='text/javascript'></script>
+    <script src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")' type='text/javascript'></script>
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($("#txtUsuario").val() != "") {
+                $("#login").css("display", "none");
+                $("#registrarNovo").css("display", "none");
+                $("#mostrarUsuario").css("display", "");
+                $("#SairUsuario").css("display", "");
+            }
+        });
+    </script>
+
+</head>
+
+
+
+<body>
+
+    <input id="txtUsuario" style="display:none" value="@ViewBag.UsuarioConectado"/>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light " id="NavCompleta">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="~/Home/Index">
+
+                    GuiSoft
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                        <path d="M8 .95 14.61 4h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.379l.5 2A.5.5 0 0 1 15.5 17H.5a.5.5 0 0 1-.485-.621l.5-2A.5.5 0 0 1 1 14V7H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 4h.89L8 .95zM3.776 4h8.447L8 2.05 3.776 4zM2 7v7h1V7H2zm2 0v7h2.5V7H4zm3.5 0v7h1V7h-1zm2 0v7H12V7H9.5zM13 7v7h1V7h-1zm2-1V5H1v1h14zm-.39 9H1.39l-.25 1h13.72l-.25-1z" />
+                    </svg>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pessoa
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="~/Pessoa/Index">Buscar</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="~/Pessoa/Create">Cadastrar Novo</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Empresa
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="~/PlanoDeConta/Index">Plano De Conta</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="~/ModoPagamento/Index">Métodos de Pagamento</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="~/UnidadeNeg/Index">Unidade Negócio</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="~/ContaCorrente/Index">Conta Corrente</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Caixa/Index" aria-disabled="true">Caixa</a>
+                        </li>
+
+                    </ul>
+                    <div class="">
+                        <a type="button" class="btn btn-outline-secondary" id="login" href="~/Usuario/Login">Entrar</a>
+                        <label style="display:none; margin-right:5px"  id="mostrarUsuario" >Usuário - <b>@ViewBag.UsuarioConectado</b></label>
+                        <label> | </label>
+                        <a type="button" class="btn btn-outline-secondary" id="registrarNovo" href="~/Usuario/Registrar">Registrar</a>
+                        <a type="button" class="btn btn-outline-danger"  style="display: none; margin-left: 5px" href="~/Usuario/Sair" id="SairUsuario">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - GuiSoft ERP</p>
+        </footer>
+    </div>
+
+
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>
