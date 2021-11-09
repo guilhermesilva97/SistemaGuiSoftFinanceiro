@@ -1,0 +1,30 @@
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\Sistema.Data.dll.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\Sistema.Data.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\Sistema.Data.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\EntityFramework.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\EntityFramework.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.csproj.AssemblyReference.cache
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.csproj.CopyComplete
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\Sistema.Dominio.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\Sistema.Dominio.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Data\bin\Debug\Sistema.Dominio.dll.config
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\Sistema.Data.dll.config
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\Sistema.Data.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\Sistema.Data.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\EntityFramework.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\Sistema.Dominio.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\Sistema.Dominio.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\Sistema.Dominio.dll.config
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\EntityFramework.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.csproj.AssemblyReference.cache
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.csproj.CoreCompileInputs.cache
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.csproj.CopyComplete
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Data\obj\Debug\Sistema.Data.pdb

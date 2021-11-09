@@ -34,19 +34,5 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DB7525D8-6626-4E08-AD9D-7DE5F6B1A8A2}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://www.divsoft.com.br:3089/tfs/divsoft
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = GuiSoft\\GuiSoft.csproj
-		SccProjectName1 = GuiSoft
-		SccLocalPath1 = GuiSoft
-		SccProjectUniqueName2 = Sistema.Data\\Sistema.Data.csproj
-		SccProjectName2 = Sistema.Data
-		SccLocalPath2 = Sistema.Data
-		SccProjectUniqueName3 = Sistema.Dominio\\Sistema.Dominio.csproj
-		SccProjectName3 = Sistema.Dominio
-		SccLocalPath3 = Sistema.Dominio
-	EndGlobalSection
+	
 EndGlobal

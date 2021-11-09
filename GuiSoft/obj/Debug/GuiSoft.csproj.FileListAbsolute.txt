@@ -1,0 +1,274 @@
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\GuiSoft.dll.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\GuiSoft.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\GuiSoft.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\csc.exe
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\csc.exe.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\csc.rsp
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\csi.exe
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\csi.exe.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\csi.rsp
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.AppContext.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Console.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.IO.Compression.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Net.Http.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.ValueTuple.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\vbc.exe
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\vbc.exe.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\vbc.rsp
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\VBCSCompiler.exe
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Antlr3.Runtime.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\EntityFramework.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\EntityFramework.SqlServer.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Newtonsoft.Json.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Owin.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Sistema.Data.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Sistema.Dominio.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.Helpers.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.Mvc.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.Optimization.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.Razor.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.WebPages.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.WebPages.Razor.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\WebGrease.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Sistema.Data.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Sistema.Data.dll.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Sistema.Dominio.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Sistema.Dominio.dll.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\EntityFramework.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\EntityFramework.SqlServer.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.Helpers.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.Mvc.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.Optimization.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.Razor.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.WebPages.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\System.Web.WebPages.Razor.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Newtonsoft.Json.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Antlr3.Runtime.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\obj\Debug\GuiSoft.csproj.AssemblyReference.cache
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\obj\Debug\GuiSoft.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\obj\Debug\GuiSoft.csproj.CopyComplete
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\obj\Debug\GuiSoft.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\obj\Debug\GuiSoft.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Buffers.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Memory.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\BouncyCastle.Crypto.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\NPOI.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\NPOI.OOXML.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\NPOI.OpenXml4Net.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\NPOI.OpenXmlFormats.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\BouncyCastle.Crypto.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\ICSharpCode.SharpZipLib.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\ICSharpCode.SharpZipLib.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\NPOI.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\GuiSoft\bin\NPOI.OOXML.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\GuiSoft.dll.config
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\GuiSoft.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\GuiSoft.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\csc.exe
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\csc.exe.config
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\csc.rsp
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\csi.exe
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\csi.exe.config
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\csi.rsp
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.AppContext.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Buffers.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Collections.Immutable.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Console.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Globalization.Calendars.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.IO.Compression.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.IO.FileSystem.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Memory.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Net.Http.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Net.Sockets.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Numerics.Vectors.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Reflection.Metadata.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.ValueTuple.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Xml.XPath.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\vbc.exe
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\vbc.exe.config
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\vbc.rsp
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\VBCSCompiler.exe
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\roslyn\VBCSCompiler.exe.config
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Antlr3.Runtime.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\BouncyCastle.Crypto.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\EntityFramework.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\EntityFramework.SqlServer.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\ICSharpCode.SharpZipLib.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Google.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Web.Infrastructure.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Newtonsoft.Json.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\NPOI.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\NPOI.OOXML.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\NPOI.OpenXml4Net.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\NPOI.OpenXmlFormats.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Owin.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Sistema.Data.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Sistema.Dominio.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.Helpers.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.Mvc.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.Optimization.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.Razor.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.WebPages.Deployment.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.WebPages.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.WebPages.Razor.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\WebGrease.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Sistema.Data.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Sistema.Data.dll.config
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Sistema.Dominio.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Sistema.Dominio.dll.config
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\BouncyCastle.Crypto.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\EntityFramework.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\EntityFramework.SqlServer.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\ICSharpCode.SharpZipLib.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\ICSharpCode.SharpZipLib.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\NPOI.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\NPOI.OOXML.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.Helpers.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.Mvc.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.Optimization.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.Razor.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.WebPages.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.WebPages.Deployment.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\System.Web.WebPages.Razor.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Newtonsoft.Json.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Antlr3.Runtime.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Google.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\obj\Debug\GuiSoft.csproj.AssemblyReference.cache
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\obj\Debug\GuiSoft.csproj.CoreCompileInputs.cache
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\obj\Debug\GuiSoft.csproj.CopyComplete
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\obj\Debug\GuiSoft.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\obj\Debug\GuiSoft.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportSource.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.Shared.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\GuiSoft\bin\stdole.dll

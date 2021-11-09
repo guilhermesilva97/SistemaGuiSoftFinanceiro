@@ -1,0 +1,42 @@
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\bin\Debug\Sistema.Dominio.dll.config
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\bin\Debug\Sistema.Dominio.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\bin\Debug\Sistema.Dominio.pdb
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\bin\Debug\EntityFramework.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\bin\Debug\EntityFramework.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.csproj.AssemblyReference.cache
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.csproj.CopyComplete
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.dll
+C:\Users\Guilherme.Silva\source\repos\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\Sistema.Dominio.dll.config
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\Sistema.Dominio.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\Sistema.Dominio.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\EntityFramework.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\EntityFramework.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.csproj.AssemblyReference.cache
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.csproj.CoreCompileInputs.cache
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.csproj.CopyComplete
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\obj\Debug\Sistema.Dominio.pdb
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.Shared.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Divsoft\Guilherme Silva\GuiSoft\Sistema.Dominio\bin\Debug\stdole.dll
